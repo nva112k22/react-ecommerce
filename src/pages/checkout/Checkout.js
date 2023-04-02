@@ -12,7 +12,7 @@ const stripePromise = loadStripe
 (process.env.REACT_APP_STRIPE_PK);
 
 const Checkout = () => {
-  const [message, setMessage] = useState("Initializing checkout");
+  const [message, setMessage] = useState("Initializing checkout...");
   const [clientSecret, setClientSecret] = useState("");
 
   const cartItems = useSelector(selectCartItems)
@@ -52,7 +52,7 @@ const Checkout = () => {
     })
     .catch((error) => {
       setMessage("Failed to initialize checkout")
-      toast.error("Something went wrong")
+      toast.error("Something went wrong!!!")
     })
   }, []);
 
